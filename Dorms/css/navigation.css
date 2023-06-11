@@ -1,0 +1,35 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: #7b1113;
+    align-items: center;
+    color: white;
+    width: 90px;
+    position: fixed;
+    top: 95px;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    border-bottom: 20px black solid;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    width: 100%;
+    transition: background-color 0.15s;
+    cursor: pointer;
+}
+
+.nav-container:hover {
+    background-color: #814d4e;
+    text-decoration: underline;
+}
+
+.nav-text {
+    text-decoration: none;
+    color: white;
+}

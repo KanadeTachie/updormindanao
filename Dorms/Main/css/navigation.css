@@ -1,0 +1,36 @@
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 85px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding-top: 20px;
+    background-color: white;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 7px 20px;
+    margin: 0px 50px;
+    transition: border 0.15s;
+}
+
+.nav-container img {
+    width: 30px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container:hover {
+    border-radius: 5px;
+    border-bottom: black 5px solid;
+}
