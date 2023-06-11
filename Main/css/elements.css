@@ -1,0 +1,9 @@
+body {
+    font-family: 'Roboto', 'Arial';
+    padding: 170px 0px 0px 0px;
+    background-color: white;/* rgba(225, 225, 225, 0.332); */
+}
+
+p {
+    margin: 0px;
+}
