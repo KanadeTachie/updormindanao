@@ -38,10 +38,6 @@
                 <img class="logo" src="../images/Header/dormiskologo.png">
             </a>
         </div>
-        <div class="middle-section">
-            <input class="search-bar" type="input" placeholder="Search" name="search"> 
-            <img class="search-icon" src="../images/Header/Search Icon White.png">
-        </div>
         <div class="right-section">
         </div>
     </header>
