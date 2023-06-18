@@ -34,7 +34,7 @@
 <body>
     <header class="header">
         <div class="left-section">
-            <a href="../html/Happy Progress Day.html">
+            <a href="http://localhost/Dormisko/Main/html/">
                 <img class="logo" src="../images/Header/dormiskologo.png">
             </a>
         </div>
@@ -68,10 +68,6 @@
                             <p>Bed space: <?php echo $row['roomcapacity']??""; ?></p>
                             <p>Water: <?php echo $row['water']??""; ?></p>
                             <p>Electricity: <?php echo $row['electricity']??""; ?></p>
-                        </div>
-                        <div class="second-column">
-                            <img src="../images/Main/Icons/rate-icon.png">
-                            <p>1.0</p>
                         </div>
                     </div>
                 </div>
