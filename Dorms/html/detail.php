@@ -27,8 +27,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- #7b1113; maroon color UP -->
-    <title>Silva Dormitory</title>
-
+<?php while($row = $dorm->fetch_assoc()) { ?>
+    <title><?php echo $row['name']??""; ?></title>
+<?php } ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -42,7 +43,7 @@
 <body>
     <header class="header">
         <div class="left-section">
-            <a href="../Main/html/Happy Progress Day.html">
+            <a href="http://localhost/Dormisko/Main/html/#">
                 <img class="logo" src="../images/Header/dormiskologo.png">
             </a>
         </div>
@@ -61,6 +62,7 @@
             <div class="address-owner-container">
                 <p><img src="../images/Dorms/Icons/address-icon.png"><?php echo $row['address']??""; ?></p>
                 <p><img src="../images/Dorms/Icons/owner-icon.png">Owner: <?php echo $row['owner']??""; ?></p>
+                <p>Email: <?php echo $row['email']??""; ?></p>
             </div>
         </section>
         <section class="image-fees-container">
@@ -81,10 +83,6 @@
                     </div>
                     <div>
                         <p>Maximum Number of Occupants: </p>
-                        <p></p>
-                    </div>
-                    <div>
-                        <p>Maximum Number of Occupants per Room: </p>
                         <p><?php echo $row['roomcapacity']??""; ?></p>
                     </div>
                     <div>
@@ -145,9 +143,9 @@
         </section>
     <?php } ?>
 
-    <?php while($row = $bfp->fetch_assoc()) { ?>
-        <section class="left-right-info-container">
-            <section class="building-info-container"> <!-- left section -->
+    <section class="left-right-info-container">
+        <section class="building-info-container"> <!-- left section -->
+        <?php while($row = $bfp->fetch_assoc()) { ?>
                 <section class="bfp-container">
                     <div class="title-container">
                         <p>Bureau of Fire Protection (BFP) Compliance</p>
@@ -224,21 +222,37 @@
                             </div>
                             <div>
                                 <li>Double Lock (Inside the Room) </li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['doublelockinside'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Window Covering that provides privacy and can be<br>
                                 <!-- &nbsp; -->&ensp;&ensp;opened and closed by the room residents</li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['curtain'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Privacy Latch that can be securely latched from the<br>
                                 <!-- &nbsp; -->&ensp;&ensp;inside without a key in a shared bathroom or toilet</li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['privacylatch'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Stay-in owner/landlord/landlady</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['ownerstayin'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                         </div>
                     </div><!--  end of detail container -->
@@ -256,22 +270,38 @@
                                 <li>All Electrical installation and fixtures are checked by a<br>
                                 &ensp;&ensp;licensed electrician at least once in every three years
                                      </li>
-                                     <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['electricalchecked'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>All Electrical circuits are connected to appropriate circuit<br>
                                 &ensp;&ensp;breakers</li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['circuitbreaker'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div><!-- &nbsp; -->
                                 <li>All gas installations and fittings are checked by a<br>
                                 &ensp;&ensp;licensed gas fitter once at least every two years</li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['gaschecked'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>All rooms, bathrooms, shower rooms, toilets, and laundry<br>
                                 &ensp;&ensp;areas are provided with ventilation </li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['lights'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                         </div>
                     </div><!--  end of detail container -->
@@ -287,44 +317,84 @@
                         <div class="detail-title">
                             <div>
                                 <li>Security guard especially at night time</li>
-                                <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php if ($row['guard'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>CCTV</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['cctv'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Perimeter Fence</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['fence'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Main Gate Entrance Lock</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['maingate'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Perimeter Lights</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['perimeterlight'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Window Grilles</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['windowgrill'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Record/Logbook (to record in and out of the Residents'<br>
                                 &ensp;&ensp;visitor</li>
-                                <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php if ($row['logbook'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Curfew</li>
-                                <p>12:00AM</p>
+                                <?php if ($row['curfew'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Properly lighted hallways and corridors</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['hallwaylight'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Street lights </li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['streetlight'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                         </div>
                     </div><!--  end of detail container -->
@@ -340,64 +410,57 @@
                         <div class="detail-title">
                             <div>
                                 <li>Clothes line or other clothes drying facility</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['clothdrying'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Wash through or basin plumbed to a continuous and<br>
                                 &ensp;&ensp;adequate supply of water</li>
-                                <img class="check-icon-long" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['lavatory'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Well ventilated kitchen area</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['ventilatedkitchen'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Dining Area </li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['diningarea'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Provision for conducive study area</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['studyarea'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                             <div>
                                 <li>Common Area/Reception for Visitors</li>
-                                <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php if ($row['receptionarea'] == "YES") { ?>
+                                    <img class="check-icon" src="../images/Dorms/Icons/CheckIcon.png">
+                                <?php } else { ?>
+                                    <img class="x-icon" src="../images/Dorms/Icons/x-icon.png">
+                                <?php } ?>
                             </div>
                     </div><!--  end of detail container -->
                 </section>
             <?php } ?>
    
-            </section>
-            <section class="building-info-right-section">
-                
-                <form class="reserve-now-container" action="/action_page.php">
-                    <div class="title-container">
-                        <p>RESERVE NOW!</p>
-                    </div>
-                    <div class="subtitle-container">
-                        <p>Set appointment</p>
-                    </div>
-                    <div class="user-info-container">
-                        <div class="email-container">
-                            <p>Email:</p>
-                            <input type="email" placeholder="Enter your email">
-                        </div>
-                        <div class="fullname-container">
-                            <p>Name:</p>
-                            <input type="text" placeholder="Enter your ful name" required>
-                        </div>
-                        <div class="contact-number-container">
-                            <p>Contact No.:</p>
-                            <div>
-                                <input id="readonly-number" type="tel" value="+63 " readonly>
-                                <input type="tel" placeholder="Enter your contact number" maxlength="10">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="submit-container">
-                        <input type="submit" value="Send!">
-                    </div>
-                </form>
             </section>
         </section>  <!-- end of the whole building info container -->
     </main>
