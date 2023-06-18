@@ -10,5 +10,4 @@
 		$_SESSION["login"] = "YES";
 		$x="OK";
 	}
-	echo $x;
 ?>

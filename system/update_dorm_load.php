@@ -138,21 +138,21 @@
 			<div class="row">	
 				<div class="form-group">
 					<div class="col-md-4">	
-						<p><input type="file"  accept="image/*" name="image1" id="image1" onchange="loadFile(event)"></p>
+						<p><input type="file"  accept="image/*" name="image1" id="image1" onchange="uloadFile(event)"></p>
 						<p><label for="image" style="cursor: pointer;">Upload Dorm Image-1</label></p>
-						<p><img id="output" width="200"/></p>
+						<p><img id="uOutput" width="200" src="<?php echo $row['imagelink']??""; ?>	"/></p>
 						<input type="hidden" name="file1" value="<?php echo $row['imagelink']??""; ?>">
 					</div>
 					<div class="col-md-4">	
-						<p><input type="file"  accept="image/*" name="image2" id="image2" onchange="loadFile2(event)"></p>
+						<p><input type="file"  accept="image/*" name="image2" id="image2" onchange="uloadFile2(event)"></p>
 						<p><label for="image" style="cursor: pointer;">Upload Dorm Image-2</label></p>
-						<p><img id="output2" width="200"/></p>
+						<p><img id="uOutput2" width="200"/></p>
 						<input type="hidden" name="file2" value="<?php echo $row['imagelink2']??""; ?>">
 					</div>
 					<div class="col-md-4">	
-						<p><input type="file"  accept="image/*" name="image3" id="image2" onchange="loadFile3(event)"></p>
+						<p><input type="file"  accept="image/*" name="image3" id="image2" onchange="uloadFile3(event)"></p>
 						<p><label for="image" style="cursor: pointer;">Upload Dorm Image-3</label></p>
-						<p><img id="output3" width="200"/></p>
+						<p><img id="uOutput3" width="200"/></p>
 						<input type="hidden" name="file3" value="<?php echo $row['imagelink3']??""; ?>">
 					</div>
 				</div>		

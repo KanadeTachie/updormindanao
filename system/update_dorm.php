@@ -9,8 +9,8 @@
 	$contact = $_POST['contact'];
 	$rooms = $_POST['rooms'];
 	$occupants = $_POST['occupants'];
-	$renthead = $_POST['perhead'];
 	$rentroom = $_POST['perroom'];
+	$renthead = $_POST['perhead'];
 	$deposit = $_POST['deposit'];
 	$advance = $_POST['advance'];
 	$transient = $_POST['transient'];

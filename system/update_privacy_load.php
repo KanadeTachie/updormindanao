@@ -70,7 +70,7 @@
 		<div class="row">	
 			<div class="form-group">
 				<div class="col-md-8">	
-					<label>Window Covering that provides privacy and can be opened and closed by the room residents</label>
+					<label>Window Covering that provides privacy and can be opened and closed by the room residents</label>
 				</div>
 				<?php		
 					$true="";
@@ -94,7 +94,7 @@
 		<div class="row">	
 			<div class="form-group">
 				<div class="col-md-8">	
-					<label>Privacy Latch that can be securely latched from the  inside without a key in a shared bathroom or toilet</label>
+					<label>Privacy Latch that can be securely latched from the inside without a key in a shared bathroom or toilet</label>
 				</div>
 				<?php		
 					$true="";
