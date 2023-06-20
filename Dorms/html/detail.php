@@ -29,16 +29,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- #7b1113; maroon color UP -->
 <?php while($row = $dorm->fetch_assoc()) { ?>
     <title><?php echo $row['name']??""; ?></title>
-<?php } ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="../css/elements.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
-    
 </head>
 <body>
     <header class="header">
@@ -54,7 +51,7 @@
     </header>
  
     <main>
-    <?php while($row = $dorm->fetch_assoc()) { ?>
+    
         <section class="title-container">
             <div>
                 <p class="title"><?php echo $row['name']??""; ?></p>
@@ -141,7 +138,7 @@
             <span>&times;</span>
             <img src="<?php echo $row['imagelink']??""; ?>">
         </section>
-    <?php } ?>
+        <?php } ?>
 
     <section class="left-right-info-container">
         <section class="building-info-container"> <!-- left section -->
