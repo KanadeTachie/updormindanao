@@ -1,5 +1,5 @@
-let updateDorm = (id) => {
-    $('#modal-form-content').html('').load( 'update_dorm_load.php', { id: id }, (res) => {
+let updateDorm = (xid) => {
+    $('#modal-form-content').html('').load( 'update_dorm_load.php', { id: xid }, (res) => {
            $('#modal-form').modal('show');
        }).on('error', () => {
            alert('Error in loading content');
@@ -65,7 +65,11 @@ $( document ).ready(function() {
                     cache : false,
                     data : {id : id},
                     success: function(result){
-                        location.reload();
+                        if (result == "TRUE"){
+                            location.reload();
+                            alert("Record successfully deleted");
+                        }
+                            
                     },
                     error: function(result){
                     },

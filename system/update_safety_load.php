@@ -117,7 +117,7 @@
 		<br/>			
 	</div>
 	<div class="modal-footer">
-		<button type= "button" onclick="saveSafety()" class="btn btn-primary">Save</button>
+		<button type= "button" onclick="saveSafety()" class="btn btn-success">Save</button>
 		<button class="btn btn-warning" data-dismiss="modal">Close</button>
 	</div>
 	</div>

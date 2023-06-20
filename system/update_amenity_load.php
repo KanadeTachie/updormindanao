@@ -169,7 +169,7 @@
 	</div>
 			
 	<div class="modal-footer">
-		<button type= "button" onclick="saveAmenity()" class="btn btn-primary">Save</button>
+		<button type= "button" onclick="saveAmenity()" class="btn btn-success">Save</button>
 		<button class="btn btn-warning" data-dismiss="modal">Close</button>
 	</div>
 </form>

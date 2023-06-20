@@ -26,4 +26,3 @@
 	$sql = "UPDATE safety SET electricalchecked='$electrical', circuitbreaker='$breaker', gaschecked='$gas', lights='$ventilation'  WHERE iddorm = $id";
 	if ($conn->query($sql) === TRUE) {
 	}
-//$sql = "UPDATE safety SET (iddorm, electricalchecked, circuitbreaker, gaschecked, lights) VALUES ($id, '$electrical', '$breaker', '$gas', '$ventilation')";

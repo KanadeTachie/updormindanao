@@ -8,12 +8,19 @@
 	$sql = "SELECT * FROM bfp WHERE iddorms = $id";
 	$result = $conn->query($sql);
 
-	$extT=""; $extF="checked";
-	$exitT="";	$exitF="checked";
-	$alarmT="";$alarmF="checked";
-	$detectorT="";	$detectorF="checked";
-	$hoseT="";	$hoseF="checked";
-	$evacT="";	$evacF="checked";
+	$extT=""; 
+	$extF="checked";
+	$exitT="";	
+	$exitF="checked";
+	$alarmT="";
+	$alarmF="checked";
+	$detectorT="";	
+	$detectorF="checked";
+	$hoseT="";	
+	$hoseF="checked";
+	$evacT="";	
+	$evacF="checked";
+	
 	while($row = $result->fetch_assoc()) { 
 
 		if($row['extinguisher'] == "YES") {
@@ -163,7 +170,7 @@
 	<br/>			
 </div>
 <div class="modal-footer">
-	<button type= "button" onclick="saveBfp()" class="btn btn-primary">Save</button>
+	<button type= "button" onclick="saveBfp()" class="btn btn-success">Save</button>
 	<button class="btn btn-warning" data-dismiss="modal">Close</button>
 </div>
 </form>

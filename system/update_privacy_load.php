@@ -9,7 +9,6 @@
 	$result = $conn->query($sql);
 ?>
 
-
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	<h5 class="modal-title">Privacy </h5>
@@ -144,7 +143,7 @@
 </div>
 
 <div class="modal-footer">
-	<button type= "button" onclick="savePrivacy()" class="btn btn-primary">Save</button>
+	<button type= "button" onclick="savePrivacy()" class="btn btn-success">Save</button>
 	<button class="btn btn-warning" data-dismiss="modal">Close</button>
 </div>
 </div>

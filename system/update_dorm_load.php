@@ -146,13 +146,13 @@
 					<div class="col-md-4">	
 						<p><input type="file"  accept="image/*" name="image2" id="image2" onchange="uloadFile2(event)"></p>
 						<p><label for="image" style="cursor: pointer;">Upload Dorm Image-2</label></p>
-						<p><img id="uOutput2" width="200"/></p>
+						<p><img id="uOutput2" width="200" src="<?php echo $row['imagelink2']??""; ?>"/></p>
 						<input type="hidden" name="file2" value="<?php echo $row['imagelink2']??""; ?>">
 					</div>
 					<div class="col-md-4">	
 						<p><input type="file"  accept="image/*" name="image3" id="image2" onchange="uloadFile3(event)"></p>
 						<p><label for="image" style="cursor: pointer;">Upload Dorm Image-3</label></p>
-						<p><img id="uOutput3" width="200"/></p>
+						<p><img id="uOutput3" width="200" src="<?php echo $row['imagelink3']??""; ?>"/></p>
 						<input type="hidden" name="file3" value="<?php echo $row['imagelink3']??""; ?>">
 					</div>
 				</div>		
@@ -163,7 +163,7 @@
 		<br/><br/>			
 	</div>
 	<div class="modal-footer">
-		<button type= "button" onclick="saveUpdate()" class="btn btn-primary">Save</button>
+		<button type= "button" onclick="saveUpdate()" class="btn btn-success">Save</button>
 		<button class="btn btn-warning" data-dismiss="modal">Close</button>
 	</div>
 

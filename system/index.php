@@ -26,27 +26,29 @@
 	<link href="js/toastr.min.css" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
 	<link href="https://cdn.datatables.net/buttons/1.6.0/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
-	
+	<title>Admin | UPDormindanao</title>
 	<script src="js/jquery-1.12.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/sc-2.0.0/datatables.min.js"></script>
 </head>
 
 <body>
-	<div id="header1">
+	<div id="header1" style="">
 	</div>
 	
 	<!-- MAIN CONTENT --> <!-- VISIBLE ONLY TO USER ON LOAD -->
 	<div id="content">
-		<div class="paper paper-polar" >
+		<div class="paper paper-polar" style="background-color: rgb(220, 53, 69);" >
 			<div class="row">
 				<div class="col-md-1">				
 				</div>
 				<div class="col-md-10">
-					<h4 class="text-center">DORMS</h4>
+					<h1 class="text-center lead" style="font-size: 50px; font-weight:bold; 
+					color: white;
+					">DORMS | ADMIN</h1>
 				</div>
 				<div class="col-md-1">		
-					<button type="button" class="btn btn-primary" onclick="showLogin()" data-toggle="tooltip" title="Login"><span class="glyphicon glyphicon-pencil"></span></button>	
+					<button type="button" class="btn btn-success" onclick="showLogin()" data-toggle="tooltip" title="Login"><span class="glyphicon glyphicon-pencil"></span></button>	
 				</div>
 			</div>
 		</div>
@@ -55,17 +57,17 @@
 				<div class="col-xs-12"><br>
 					<input type="hidden" id="login">
 					<div class="col-md-1">
-						<button type="button" class="btn btn-primary" onclick="showAdd()" data-toggle="tooltip" title="New Dorm"><span class="glyphicon glyphicon-plus"></span></button>	
+						<button type="button" class="btn btn-success" onclick="showAdd()" data-toggle="tooltip" title="New Dorm"><span class="glyphicon glyphicon-plus"></span></button>	
 					</div>
 					<div class="col-md-7">
 					</div>
 					<form>
 						<div class="col-md-3">
-							<input type="text" class="form-control" id="search" name="search" maxlength="45"  placeholder="search owner/name">
+							<input type="text" class="form-control" id="search" name="search" maxlength="45"  placeholder="Search Owner / Name">
 						</div>
 						<div class="col-md-1">
 							<input type="hidden" name="trans" value = "SEARCH">
-							<button type="submit" class="btn btn-primary btn-block">Search</button>	
+							<button type="submit" class="btn btn-success btn-block">Search</button>	
 						</div>
 					</form>
 				</div>
@@ -95,12 +97,12 @@
                                         <td><?php echo $row['owner']??""; ?></td>
                                         <td><?php echo $row['address']??""; ?></td>
 										<td >
-											<button class="btnView" name = "AMENITY" id="<?php echo $row['iddorms'] ?>">Amenity</button>
-											<button class="btnView" name = "BFP" id="<?php echo $row['iddorms'] ?>">Fire Safety</button>
-											<button class="btnView" name = "PRIVACY" id="<?php echo $row['iddorms'] ?>">Privacy</button>
-											<button class="btnView" name = "SAFETY" id="<?php echo $row['iddorms'] ?>">Safety</button>
-											<button class="btnView" name = "SECURITY" id="<?php echo $row['iddorms'] ?>">Security</button>
-											<button class="btnView" name = "DELETE" id="<?php echo $row['iddorms'] ?>">Delete</button>
+											<button class="btnView btn btn-success" name = "AMENITY" id="<?php echo $row['iddorms'] ?>">Amenity</button>
+											<button class="btnView btn btn-success" name = "BFP" id="<?php echo $row['iddorms'] ?>">Fire Safety</button>
+											<button class="btnView btn btn-success" name = "PRIVACY" id="<?php echo $row['iddorms'] ?>">Privacy</button>
+											<button class="btnView btn btn-success" name = "SAFETY" id="<?php echo $row['iddorms'] ?>">Safety</button>
+											<button class="btnView btn btn-success" name = "SECURITY" id="<?php echo $row['iddorms'] ?>">Security</button>
+											<button class="btnView btn btn-warning" name = "DELETE" id="<?php echo $row['iddorms'] ?>">Delete</button>
 										</td>
                                     </tr>
                                 <?php } ?>
@@ -146,4 +148,6 @@
 	<!-- SCRIPT FOR LOGIN VERIFICATION -->
 	<script src="loginVerify.js"></script>
 
+	<script src="imageDisplay.js"></script>
+	
 </body>

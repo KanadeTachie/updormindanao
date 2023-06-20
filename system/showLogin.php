@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="loginVerify()">Login</button>
+                <button class="btn btn-success" onclick="loginVerify()">Login</button>
             </div>
         </div>
     </div>
